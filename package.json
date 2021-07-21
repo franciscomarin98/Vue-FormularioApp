@@ -8,9 +8,20 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.6",
+    "@vueuse/core": "^5.1.4",
+    "autoprefixer": "9",
+    "card-validator": "^8.1.1",
     "core-js": "^3.6.5",
+    "maska": "^1.4.4",
+    "postcss": "7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vee-validate": "^4.4.7",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "yup": "^0.32.9",
+    "yup-phone": "^1.2.19",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
