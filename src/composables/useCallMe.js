@@ -11,7 +11,7 @@ export default function () {
   } = useField(
     'phone',
     YupString()
-      .phone('ES', true, 'El teléfono no tiene un formato Español')
+      .phone('EC', true, 'El teléfono no tiene un formato Ecuatoriano')
       .required()
   )
 
