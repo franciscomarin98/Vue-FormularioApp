@@ -29,32 +29,17 @@
           to="/forms/call-me"
           active-class="underline text-white"
           class="mr-5 hover:text-white"
-        >Llámame</router-link
-        >
-        <router-link
-          to="/forms/strong-password"
-          active-class="underline text-white"
-          class="mr-5 hover:text-white"
-        >Fortaleza contraseña</router-link
-        >
-        <router-link
-          to="/forms/dependent-fields"
-          active-class="underline text-white"
-          class="mr-5 hover:text-white"
-        >Formulario dependiente</router-link
+        >Llámame
+        </router-link
         >
         <router-link
           to="/forms/credit-card"
           active-class="underline text-white"
           class="mr-5 hover:text-white"
-        >Pago con tarjeta</router-link
+        >Formulario
+        </router-link
         >
-        <router-link
-          to="/forms/wizard"
-          active-class="underline text-white"
-          class="mr-5 hover:text-white"
-        >Wizard</router-link
-        >
+
       </nav>
     </div>
   </header>
