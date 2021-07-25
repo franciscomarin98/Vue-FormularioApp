@@ -5,6 +5,11 @@ const routes = [
     name: 'CallMe',
     path: '/forms/call-me',
     component: () => import(/* webpackChunkName: 'callme' */ '../views/CallMe')
+  },
+  {
+    name: 'General',
+    path: '/forms/general',
+    component: () => import(/* webpackChunkName: 'general' */ '../views/General')
   }
 ]
 

@@ -33,7 +33,9 @@
         </router-link
         >
         <router-link
-          to="/forms/credit-card"
+          :to="{
+            name: 'General',
+          }"
           active-class="underline text-white"
           class="mr-5 hover:text-white"
         >Formulario
