@@ -5,14 +5,33 @@
     </label>
     <input
       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
-      id="grid-first-name" type="text" placeholder="Jane Doe">
-    <p class="text-red-500 text-xs italic">Complete el campo</p>
+      id="grid-first-name"
+      type="text"
+      placeholder="Jane Doe"
+      v-model="nombre"
+      @keyup="validateInput()"
+      @blur="validateInput()">
+    <p class="text-red-500 text-xs italic" v-if="error">{{ error }}</p>
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
-  name: 'NameField'
+  name: 'NameField',
+  setup () {
+    const nombre = ref(null)
+    const error = ref(null)
+    const validateInput = () => {
+      error.value = nombre.value === '' ? 'El campo nombre es requerido' : ''
+    }
+    return {
+      nombre,
+      error,
+      validateInput
+    }
+  }
 }
 </script>
 
