@@ -9,26 +9,29 @@
       type="text"
       placeholder="Jane Doe"
       v-model="nombre"
-      @keyup="validateInput()"
-      @blur="validateInput()">
-    <p class="text-red-500 text-xs italic" v-if="error">{{ error }}</p>
+      @keyup="validateInput">
+    <p class="text-red-500 text-xs italic" v-if="errors.nombre">{{ errors.nombre }}</p>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
+import useFormValidation from '../modules/useFormValidation'
 
 export default {
   name: 'NameField',
   setup () {
     const nombre = ref(null)
-    const error = ref(null)
+    const {
+      validateNameField,
+      errors
+    } = useFormValidation()
     const validateInput = () => {
-      error.value = nombre.value === '' ? 'El campo nombre es requerido' : ''
+      validateNameField('nombre', nombre.value)
     }
     return {
       nombre,
-      error,
+      errors,
       validateInput
     }
   }
