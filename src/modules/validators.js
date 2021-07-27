@@ -12,9 +12,17 @@ export default function useValidators () {
     return !regExp.test(fieldValue) ? `El correo "${fieldValue}" no posee un formato correcto` : ''
   }
 
+  const isSecurePassword = (fieldName, fieldValue) => {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/
+    return !regex.test(fieldValue)
+      ? 'La contraseña ingresada debe poseer mayúsculas, minusculas, numeros, caracteres y minimo 8 caracteres'
+      : ''
+  }
+
   return {
     isEmpty,
     minLength,
-    isEmail
+    isEmail,
+    isSecurePassword
   }
 }

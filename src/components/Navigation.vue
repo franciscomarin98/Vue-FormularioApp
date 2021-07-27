@@ -26,7 +26,7 @@
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700flex flex-wrap items-center text-base justify-center"
       >
         <router-link
-          to="/forms/call-me"
+          :to="{name: 'CallMe'}"
           active-class="underline text-white"
           class="mr-5 hover:text-white"
         >Llámame

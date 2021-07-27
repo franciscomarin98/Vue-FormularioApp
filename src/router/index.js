@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     name: 'CallMe',
-    path: '/forms/call-me',
+    path: '/',
     component: () => import(/* webpackChunkName: 'callme' */ '../views/CallMe')
   },
   {
