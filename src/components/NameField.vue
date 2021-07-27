@@ -9,7 +9,8 @@
       type="text"
       placeholder="Jane Doe"
       v-model="nombre"
-      @keyup="validateInput">
+      @keyup="validateInput"
+      @blur="validateInput">
     <p class="text-red-500 text-xs italic" v-if="errors.nombre">{{ errors.nombre }}</p>
   </div>
 </template>
@@ -21,7 +22,7 @@ import useFormValidation from '../modules/useFormValidation'
 export default {
   name: 'NameField',
   setup () {
-    const nombre = ref(null)
+    const nombre = ref('')
     const {
       validateNameField,
       errors
